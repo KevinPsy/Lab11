@@ -1,7 +1,7 @@
 library(tidyverse)
 
 #Q1
-rambinom<-function(n,p){
+rambinom <- function(n,p){
   x <- NULL
   x <- runif(n, min = 0, max = 1)
   return(sum(x < p))
@@ -45,8 +45,8 @@ ramnorm<-function(n){
   return(rv[1:(length(rv)/2)])
 }
 
-muller<-ramnorm(100)
-normal<-rnorm(100, 0, 1)
+muller <- ramnorm(100)
+normal <- rnorm(100, 0, 1)
 
 ggplot()+
   geom_density(aes(normal, fill="normal", alpha=0.5))+
